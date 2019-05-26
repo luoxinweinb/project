@@ -1,0 +1,190 @@
+<!DOCTYPE html >
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+<title>AHEAD信息分院教务管理系统</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+<link th:href="@{~/assets/css/bootstrap.min.css}" rel="stylesheet" />
+<link rel="stylesheet" th:href="@{~/assets/css/font-awesome.min.css}" />
+<link rel="stylesheet" th:href="@{~/assets/css/ace.min.css}" />
+<link rel="stylesheet" th:href="@{~/assets/css/ace-rtl.min.css}" />
+
+<link rel="stylesheet" rev="stylesheet" th:href="@{~/css/login/style.css}" type="text/css" media="all" />
+
+<link th:href="@{~/css/login/validatecode.css}" rel="stylesheet" type="text/css" />
+ <script type="text/javascript" th:src="@{~/js/jquery-1.11.2.min.js}"></script>
+ <script type="text/javascript" th:src="@{~/js/login.js}"></script>
+ <script type="text/javascript" th:src="@{~/js/index.js}"></script>
+ <!-- 统计在线人数 -->
+ <script type="text/javascript" th:src="@{~/js/countPerson.js}"></script>
+ <script type="text/javascript" th:src="@{~/js/validatecode.js}"></script>
+</head>
+ <script type="text/javascript">
+ //禁用浏览器回退等按钮 
+ window.history.forward(-1);
+ window.history.forward(1);
+ </script>
+
+<style type="text/css">
+<!--
+body {
+	margin-left: 0px;
+	margin-top: 0px;
+	margin-right: 0px;
+	margin-bottom: 0px;
+	background-color: #1D3647;
+}
+-->
+</style>
+<link href="../static/images/skin.css" rel="stylesheet" type="text/css">
+<body onload="createCode()">
+<table width="100%"   border="0" cellpadding="0" cellspacing="0">
+  <tr>
+    <td height="20" valign="top">
+    <table width="100%"   border="0" cellpadding="0" cellspacing="0" class="login_top_bg">
+      <tr>
+        
+        <td  align="right" valign="middle">
+         <a href="javascript:void(0)" onclick="SetHome(this,window.location)"><font color="white">【设为主页】</font></a> &nbsp;&nbsp;
+         <a href="javascript:void(0)" onclick="shoucang(document.title,window.location)"><font color="white">【加入收藏】</font></a>
+        </td>
+      </tr>
+    </table>
+    </td>
+  </tr>
+  <tr>
+    <td valign="top">
+    <table width="100%" height="522" border="0" cellpadding="0" cellspacing="0" class="login_bg">
+      <tr>
+        <td width="52%" align="right">
+         <!-- class="login_bg2" -->
+        <table width="100%" height="532" border="0" cellpadding="0" cellspacing="0" >
+            <tr>
+              <td height="138" valign="top">
+              <table width="100%" height="427" border="0" cellpadding="0" cellspacing="0">
+                <tr>
+                  <td height="149">&nbsp;</td>
+                </tr>
+                <tr>
+                
+                  <td height="80" align="right" valign="top"><font color="#0060BF">
+                  <h2>AHEAD信息分院教务管理系统V1.0</h2></font>
+                  </td>
+                </tr>
+                <tr>
+                  <td height="198" align="right" valign="top">
+                  <table width="100%" border="0" cellpadding="0" cellspacing="0" align="center">
+                    <tr>
+                      <td width="4%"></td>
+                      <td height="160"  colspan="2" class="left_txt">
+           
+                      <table width="100%" border="0" class="left_txt">
+                      
+                       <tr>
+                       <td align="left"> <a href=""   target="_bank">2018-2019第二学期期末考试通知</a></td>
+                       <td width="20">&nbsp;</td><td>2019-06-12</td>
+                       </tr>
+           
+                       <tr>
+                       <td>&nbsp;</td>
+                       <td width="50">&nbsp;</td>
+                       <td><a href=""   target="_bank">更多>>></a></td>
+                       </tr>
+                      </table>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td width="20%">&nbsp;</td>
+                      <td width="30%" height="40"><img th:src="@{~/images/icon-demo.gif}" width="20" height="20"><a href=""  target="_bank" class="left_txt3">学生登录</a> </td>
+                      <td width="35%"><img th:src="@{~/images/icon-login-seaver.gif}" width="20" height="20"><a href="" target="_bank"  class="left_txt3">资料下载</a></td>
+                    </tr>
+                  </table></td>
+                </tr>
+              </table></td>
+            </tr>
+            
+        </table></td>
+        <td width="1%" >&nbsp;</td>
+        <td width="100%" valign="bottom">
+        <table width="100%" height="69" border="0" align="center" cellpadding="0" cellspacing="0">
+            <tr>
+              <td width="4%">&nbsp;</td>
+              <td width="96%" height="18"><span class="login_txt_bt">系统登录</span></td>
+            </tr>
+            <tr>
+              <td>&nbsp;</td>
+              <td height="21">
+            
+			   <font color="red" style="display:none">
+					<i class="icon-coffee red"></i>
+			   </font>
+				
+              <table cellSpacing="0" cellPadding="0" width="100%" border="0" id="table211" height="338">
+                  <tr>
+                    <td height="164" colspan="2" align="middle">
+                    <form name="myform" method="post" onsubmit="return validate()">
+                        <table cellSpacing="0" cellPadding="0" width="100%" border="0" height="143" id="table212">
+                          <tr>
+                            <td width="15%" height="38" class="top_hui_text"><span class="login_txt">账 号：&nbsp;&nbsp; </span></td>
+                            <td width="40%" height="38"  class="top_hui_text"><input name="userNumber" id="userNumber" type="text" class="editbox4" value="" size="20">                            </td>
+                            <td>&nbsp;</td>
+                          </tr>
+                          <tr>
+                            <td  height="35" class="top_hui_text"><span class="login_txt"> 密 码： &nbsp;&nbsp; </span></td>
+                            <td  height="35"  class="top_hui_text"><input class="editbox4" type="password" size="20" id="userPassowrd" name="userPassowrd">
+                              <img th:src="@{~/images/luck.gif}" width="19" height="18"> </td>
+                          <td>&nbsp;</td>
+                          </tr>
+                          <tr>
+                            <td  height="35" ><span class="login_txt">验证码：</span></td>
+                            <td height="35"  class="top_hui_text">
+                            <input class="wenbenkuang" id="inputCode" name="inputCode" type=text  value="" maxLength=6  size=10>
+                            <a href="" onClick="createCode()" >看不清换一张</a>
+                            </td>
+                            <td align="left">
+                            <div  class="code" id="checkCode" onClick="createCode()"></div>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td height="35" >&nbsp;</td>
+                            <td height="35" >
+                            <input name="Submit" type="submit"   id="Submit" value="登 陆"/>
+                            &nbsp;
+                            <input name="reset" type="reset"     id="cs" value="取 消"/>
+                            &nbsp;
+                             <a href=""  target="_bank">忘记密码</a>
+                          
+                            </td>
+                            <td width="87%" class="top_hui_text">
+                            &nbsp;
+                            </td>
+                          </tr>
+                        </table>
+                        <br>
+                    </form></td>
+                  </tr>
+                  <tr>
+                    <td width="203" height="124" align="right" valign="bottom">
+                    <!--  -->
+                    <img th:src="@{~/images/login-wel.gif}" width="242" height="138">
+                    
+                    </td>
+                    <td width="57" align="right" valign="bottom">&nbsp;</td>
+                  </tr>
+              </table></td>
+            </tr>
+          </table>
+          </td>
+      </tr>
+    </table></td>
+  </tr>
+  <tr>
+    <td>
+    <!-- 包含版权信息 -->
+   
+    </td>
+  </tr>
+</table>
+</body>
+</html>

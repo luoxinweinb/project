@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.ly666.project.mapper.AnthortyInfoMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.ly666.project.entity.AnthortyInfo">
+        <id column="anthorty_id" property="anthortyId" />
+        <result column="anthorty_pid" property="anthortyPid" />
+        <result column="anthorty_name" property="anthortyName" />
+        <result column="anthorty_desc" property="anthortyDesc" />
+        <result column="anthorty_url" property="anthortyUrl" />
+    </resultMap>
+
+
+</mapper>

@@ -1,0 +1,32 @@
+ .code
+    {
+            background:url(../resources/images/code_bg.jpg);
+            font-family:Arial;
+            font-style:italic;
+             color:blue;
+             font-size:16px;
+             border:0;
+             padding:2px 3px;
+             letter-spacing:3px;
+             font-weight:bolder;                       
+             cursor:pointer;
+             width:100px;
+             height:30px;
+             line-height:30px;
+             text-align:left;
+             vertical-align:middle;
+
+    }
+    a
+    {
+        text-decoration:none;
+        font-size:16px;
+        color:blue;
+        }
+    a:hover
+    {
+       text-decoration:underline;
+        }
+  
+        
+    .STYLE1 {font-size: 16px}

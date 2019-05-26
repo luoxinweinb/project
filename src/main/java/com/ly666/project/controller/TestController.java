@@ -1,0 +1,1 @@
+package com.ly666.project.controller;import org.springframework.web.bind.annotation.RequestMapping;import org.springframework.web.bind.annotation.RestController;/** * @author ：luoyi * @date ：Created in 2019/5/23 22:33 * @desc : {} */@RestControllerpublic class TestController {	@RequestMapping("/xx")	public String test(){		return "hello";	}}

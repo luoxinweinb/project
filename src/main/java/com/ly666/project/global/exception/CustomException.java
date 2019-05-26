@@ -1,0 +1,1 @@
+package com.ly666.project.global.exception;import lombok.extern.slf4j.Slf4j;import org.springframework.web.bind.annotation.ControllerAdvice;import org.springframework.web.bind.annotation.ResponseBody;/** * @author ：luoyi * @date ：Created in 2019/5/23 14:54 * @desc : {} */@ControllerAdvice@ResponseBody@Slf4jpublic class CustomException {}
