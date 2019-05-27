@@ -1,16 +1,17 @@
 package com.ly666.project.entity;
 
 import com.baomidou.mybatisplus.annotation.IdType;
-import com.baomidou.mybatisplus.annotation.TableId;
 import com.baomidou.mybatisplus.annotation.TableField;
-import java.io.Serializable;
+import com.baomidou.mybatisplus.annotation.TableId;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 import lombok.experimental.Accessors;
 
+import java.io.Serializable;
+
 /**
  * <p>
- * 
+ * 角色信息表
  * </p>
  *
  * @author luoyi
@@ -24,16 +25,15 @@ public class RoleInfo implements Serializable {
     private static final long serialVersionUID = 1L;
 
     @TableId(value = "role_id", type = IdType.AUTO)
-    private Integer roleId;
+    private Integer roleId;//角色编号
 
     @TableField("role_name")
-    private String roleName;
+    private String roleName;//角色名称
 
     @TableField("role_desc")
-    private String roleDesc;
+    private String roleDesc;//角色描述
 
     @TableField("role_state")
-    private String roleState;
-
+    private String roleState;//角色状态
 
 }

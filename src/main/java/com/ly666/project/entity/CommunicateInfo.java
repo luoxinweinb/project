@@ -1,17 +1,18 @@
 package com.ly666.project.entity;
 
 import com.baomidou.mybatisplus.annotation.IdType;
-import com.baomidou.mybatisplus.annotation.TableId;
-import java.time.LocalDateTime;
 import com.baomidou.mybatisplus.annotation.TableField;
-import java.io.Serializable;
+import com.baomidou.mybatisplus.annotation.TableId;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 import lombok.experimental.Accessors;
 
+import java.io.Serializable;
+import java.time.LocalDateTime;
+
 /**
  * <p>
- * 
+ * 班主任对学生的评价表
  * </p>
  *
  * @author luoyi
@@ -28,49 +29,49 @@ public class CommunicateInfo implements Serializable {
      * 编号
      */
     @TableId(value = "communicate_id", type = IdType.AUTO)
-    private Integer communicateId;
+    private Integer communicateId;//编号
 
     @TableField("student_id")
-    private Integer studentId;
+    private Integer studentId;//学生编号
 
     @TableField("staff_id")
-    private Integer staffId;
+    private Integer staffId;//员工编号
 
     /**
      * 评价时间
      */
     @TableField("communicate_time")
-    private LocalDateTime communicateTime;
+    private LocalDateTime communicateTime;//评价时间
 
     /**
      * 评价内容
      */
     @TableField("communicate_content")
-    private String communicateContent;
+    private String communicateContent;//品行评语
 
     @TableField("communicate_xuenian")
-    private String communicateXuenian;
+    private String communicateXuenian;//学年
 
     @TableField("communicate_xueqi")
-    private String communicateXueqi;
+    private String communicateXueqi;//学期
 
     /**
      * 病事假统计
      */
     @TableField("leave_count")
-    private Integer leaveCount;
+    private Integer leaveCount;//病事假统计
 
     /**
      * 旷课统计
      */
     @TableField("truancy_count")
-    private Integer truancyCount;
+    private Integer truancyCount;//旷课统计
 
     /**
      * 奖惩记载
      */
     @TableField("reward_punish")
-    private String rewardPunish;
+    private String rewardPunish;//奖惩记载
 
 
 }
